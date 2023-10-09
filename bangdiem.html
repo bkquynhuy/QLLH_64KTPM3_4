@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điểm Sinh Viên</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/trangchu3.css">
+        <link rel="stylesheet" href="css/bangdiem.css">
+        <link rel="stylesheet" href="css/trangchu.css">
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+            <header>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>  
+                    </button>
+                    <a class="navbar-brand" href="#"><span class="logo">
+                        <img src="images/logo2.png" class="img-fluid" style="width:230px; margin:-10px 0px 0px 0px;"></span>
+                    </a>  
+                </div>
+                <div class="collapse navbar-collapse">
+                    <div class="search">   
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="search" class="form-control" size="50" style="border-radius:20px 0px 0px 20px;"
+                                    placeholder="Bạn muốn tìm kiếm ..." required>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-primary" style="border-radius:0px 20px 20px 0px; outline: none;">
+                                        <span class="glyphicon glyphicon-search"></span>Tìm kiếm</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </header>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Giới thiệu</a></li>
+                    <li><a href="">Thông Báo</a></li>
+                    <li><a href="">Bảng Điểm</a></li>
+                    <li><a href="">Quỹ Lớp</a></li>
+                    <li><a href="">Liên Hệ</a></li>
+                    <li>
+                        <a href="#" title="Thông báo" class="notification-icon">
+                            <i class="fa fa-bell"></i>
+                        </a>
+                        <div id="notification-box" class="notification-box">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <!-- Nội dung thông báo sẽ xuất hiện ở đây -->
+                                    <p>Thằng nào có tiền, thì nộp tiền đô nết cho tao.</p>
+                                    <p>Ít thì 5 quả trứng, nhiều thì cái tên lửa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="" title="Đăng Nhập"><i class="fa fa-user"></i></a></li>
+                </ul> 
+            </div> 
+        </nav>
+        <div></div>
+        <div class="page" style="padding-top: 85px;padding-left: 10px; background: rgb(255, 255, 255);">
+            <h3><a href="">Trang chủ</a> <span>/</span> Bảng điểm sinh viên</h3>
+        </div>
+        
+        <h2>Bảng Điểm Sinh Viên</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên Sinh Viên</th>
+                <th>Mã Sinh Viên</th>
+                <th>Ngày Sinh</th>
+                <th>Toán</th>
+                <th>Văn</th>
+                <th>Anh</th>
+                <th>Kết Quả</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Bùi Khắc Huy</td>
+                <td>SV001</td>
+                <td>27/10/2004</td>
+                <td>0.5</td>
+                <td>0.0</td>
+                <td>1.5</td>
+                <td class="status red">Không Đạt</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Trần Tiến Đạt</td>
+                <td>SV001</td>
+                <td>09/01/2004</td>
+                <td>8.5</td>
+                <td>7.0</td>
+                <td>6.5</td>
+                <td class="status green">Đạt</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Đinh Quang Đạt</td>
+                <td>SV001</td>
+                <td>01/01/1990</td>
+                <td>8.5</td>
+                <td>7.0</td>
+                <td>6.5</td>
+                <td class="status green">Đạt</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Đỗ Văn Đạt</td>
+                <td>SV001</td>
+                <td>01/01/1990</td>
+                <td>8.5</td>
+                <td>7.0</td>
+                <td>6.5</td>
+                <td class="status green">Đạt</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Nguyễn Việt Dũng</td>
+                <td>SV001</td>
+                <td>01/01/1990</td>
+                <td>8.5</td>
+                <td>7.0</td>
+                <td>6.5</td>
+                <td class="status red">Không Đạt</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Đinh Văn Học</td>
+                <td>SV001</td>
+                <td>01/01/1990</td>
+                <td>8.5</td>
+                <td>7.0</td>
+                <td>6.5</td>
+                <td class="status green">Đạt</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Nguyễn Văn Long</td>
+                <td>SV001</td>
+                <td>01/01/1990</td>
+                <td>8.5</td>
+                <td>7.0</td>
+                <td>6.5</td>
+                <td class="status red">Không Đạt</td>
+            </tr>
+            <!-- Thêm các hàng dữ liệu khác ở đây -->
+        </tbody>
+    </table>
+    
+        <footer class="site-footer">
+            <div class="row">
+              <div class="col-sm-12 col-md-3">
+                  <h6>Giới thiệu</h6>
+                  <p>Nhằm giúp các thầy cô giáo và các sinh viên có thể thuận tiện trong việc kiểm tra thông tin, tình hình học tập, thông tin quỹ lớp,... Chúng tôi đã đưa ra trang quản lý lớp học nhằm phục vụ các giảng viên cũng như các sinh viên</p>
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <h6>Hỗ trợ</h6>
+                <ul class="footer-links">
+                  <li><a href="">Phương thức liên hệ</a></li>
+                  <li><a href="">Địa chỉ</a></li>
+                  <li><a href="">Chính sách bảo mật</a></li>
+                  <li><a href="">Câu hỏi thường gặp</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-md-3">
+                  <h6>Mạng Xã Hội</h6>
+                  <ul class="footer-links" style="display: flex;letter-spacing: 50px;">
+                    <li><a href="https://www.facebook.com/bk.huy204"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/bk.huy204/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCg7ADvDiRQ1w7ek_gRwV0Sw"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@bk.huy204"><i class="fa-brands fa-tiktok"></i></a></li>
+                  </ul>
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <h6>Liên Hệ</h6>
+                <ul class="footer-links">
+                  <li><a href=""><i class="fa-solid fa-location-dot"></i> 175 Tây Sơn - Đống Đa - Hà Nội</a></li>
+                  <li><a href=""><i class="fa-solid fa-phone-volume"></i> 0837 607 568</a></li>
+                  <li><a href=""><i class="fa-solid fa-envelope"></i> buikhachuy@gmail.com</a></li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2023 <a href="#">64KTPM3</a>.</p>
+              </div>
+            </div>
+        </footer>
+    
+        <div id="backtop">
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // js
+        const notificationIcon = document.querySelector(".notification-icon");
+        const notificationBox = document.getElementById("notification-box");
+
+        notificationIcon.addEventListener("click", (event) => {
+            if (notificationBox.style.display === "block") {
+                notificationBox.style.display = "none";
+            } else {
+                notificationBox.style.display = "block";
+            }
+            event.stopPropagation();
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!notificationIcon.contains(event.target) && !notificationBox.contains(event.target)) {
+                notificationBox.style.display = "none";
+            }
+        });
+    </script>
+    
+
+</body>
+</html>
