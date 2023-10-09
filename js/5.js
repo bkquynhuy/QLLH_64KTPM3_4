@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 $(document).ready(function() {
     $("#notification-button").click(function() {
-      // Display the notification box
+
       $("#notification-box").show();
     });
   });
@@ -25,16 +25,13 @@ $(document).ready(function() {
     })
 });
 
-/// Lấy thẻ biểu tượng thông báo và khung chứa nội dung thông báo
 const notificationIcon = document.getElementById("notification-icon");
 const notificationPopup = document.getElementById("notification-popup");
 
-// Sự kiện click vào biểu tượng thông báo
 notificationIcon.addEventListener("click", () => {
-    notificationPopup.style.display = "block"; // Hiển thị khung chứa nội dung
+    notificationPopup.style.display = "block";
 });
 
-// Hàm đóng khung chứa nội dung thông báo
 function closePopup() {
     notificationPopup.style.display = "none";
 }
