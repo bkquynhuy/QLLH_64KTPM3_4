@@ -116,7 +116,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     width: 80%;
-    height: 530px;
+    height: 530px;white
     margin: 0px 140px;
 }
 
@@ -379,7 +379,7 @@ html {
 
 .navbar-nav .notification-icon .fa-bell {
     font-size: 24px;
-    color: #fff; 
+    color: red; 
 }
 
 .notification-box {
