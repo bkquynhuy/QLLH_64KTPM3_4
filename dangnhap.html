@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="/QLLH_64KTPM3_4/css/login.css">
 </head>
 <body>
+    <form id="loginForm">
     <div class="login">
         <h1 class="login-heading">Login</h1>
         <form action="#" class="login-form" autocomplete="off">
             <label for="email" class="login-label">Email</label>
-            <input type="email" id="email" class="login-input" placeholder="Eg: buikhachuy@gmail.com">
+            <input type="email" id="username" class="login-input" placeholder="Eg: buikhachuy@gmail.com">
             <label for="password" class="login-label">Mật khẩu</label>
             <input type="password" id="password" class="login-input" placeholder="******">
-            <a href="trangchu_dalogin.html" class="login-submit">Đăng nhập</a>
+            <input class="login-submit" type="submit" value="Đăng Nhập" id="loginButton" disabled>
+            <!-- <a id="loginButton" href="trangchu_dalogin.html" class="login-submit">Đăng nhập</a> -->
         </form>
         <p class="login-forgot-password">
             <a href="#">Quên mật khẩu?</a>
@@ -26,6 +28,46 @@
             Bạn chưa có tài khoản? <a href="dangky.html">Đăng ký</a>
         </p>
     </div>
+</form>
 </body>
 </html>
 <script src="js/5.js"></script>
+<script>
+    // Lấy các trường dữ liệu và nút đăng nhập
+    var usernameInput = document.getElementById("username");
+    var passwordInput = document.getElementById("password");
+    var loginButton = document.getElementById("loginButton");
+
+    // Thêm sự kiện nghe vào các trường dữ liệu
+    usernameInput.addEventListener("input", validateForm);
+    passwordInput.addEventListener("input", validateForm);
+
+    // Hàm kiểm tra xem liệu các trường dữ liệu đã được điền đầy đủ hay không
+    function validateForm() {
+        if (usernameInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
+            // Nếu cả hai trường đều được điền, cho phép nút đăng nhập hoạt động
+            loginButton.disabled = false;
+        } else {
+            // Nếu có ít nhất một trường chưa được điền, khóa nút đăng nhập
+            loginButton.disabled = true;
+        }
+    }
+
+    // Thêm sự kiện nghe cho biểu mẫu đăng nhập
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
+
+        // Kiểm tra xác thực thông tin người dùng tại đây.
+        // Đây là nơi bạn có thể thêm mã kiểm tra người dùng và chuyển hướng nếu hợp lệ.
+        var username = usernameInput.value.trim();
+        var password = passwordInput.value.trim();
+
+        if (username === "huy@gmail.com" && password === "123456") {
+            // Nếu thông tin xác thực hợp lệ, chuyển hướng đến trang chủ
+            window.location.href = "trangchu_dalogin.html";
+        } else {
+            // Nếu thông tin không hợp lệ, có thể hiển thị thông báo hoặc thực hiện xử lý khác
+            alert("Thông tin đăng nhập không chính xác. Vui lòng thử lại.");
+        }
+    });
+</script>
