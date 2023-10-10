@@ -46,104 +46,116 @@
                 </div>
             </header>
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="trangchu.html">Trang chủ</a></li>
-                    <li><a href="bangdiem.html">Bảng Điểm</a></li>
-                    <li><a href="thongtinsv.html">Thông Tin Sinh Viên</a></li>
-                    
-                    <li>
-                        <a href="#" title="Thông báo" class="notification-icon">
-                            <i class="fa fa-bell"></i>
-                        </a>
-                        <div id="notification-box" class="notification-box">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <!-- Nội dung thông báo sẽ xuất hiện ở đây -->
-                                    <p>Thông báo từ admin sẽ hiển thị ở đây.</p>
+                <div id="header-nav">
+                    <ul id="nav">
+                        <li><a href=""><i class="nav-icon ti-home"></i></a></li>
+                        <li><a href="">TRANG CHỦ</a>|</li>
+                        <li><a href="">SINH VIÊN</a>|</li>
+                        <li><a href="thongtinsv.html">THÔNG TIN SINH VIÊN</a>|</li>
+                        <li><a href="bangdiem.html">BẢNG ĐIỂM</a></li>
+                    </ul>
+                    <div class="user-nav">
+                        
+                        <!-- <i class="user-icon ti-user"></i> -->
+                        <ul id="nav">
+                            <li>
+                            <a href="#" title="Thông báo" class="notification-icon">
+                                <i class="fa fa-bell"></i>
+                            </a>
+                            <div id="notification-box" class="notification-box">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <!-- Nội dung thông báo sẽ xuất hiện ở đây -->
+                                        <p>Thông báo từ admin sẽ hiển thị ở đây.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li><a href="dangnhap.html" title="Đăng Nhập"><i class="fa fa-user"></i></a></li>
-                </ul> 
+                        </li>
+                            <li><a href="dangky.html">ĐĂNG KÝ</a> / </li>
+                            <li><a href="dangnhap.html">ĐĂNG NHẬP</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div> 
         </nav>
         <div></div>
-        <div class="page" style="padding-top: 85px;padding-left: 10px; background: rgb(255, 255, 255);">
-            <h3><a href="">Trang chủ</a> <span>/</span> Thông Tin Sinh Viên</h3>
+        <div id="body-web">
+            <div class="page" style="padding-top: 85px;padding-left: 10px; background: rgb(255, 255, 255);">
+                <h3><a href="">Trang chủ</a> <span>/</span> Thông Tin Sinh Viên</h3>
+            </div>
+            <h2>Thông Tin Sinh Viên</h2>
+            <table>
+                <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Họ Tên</th>
+                  <th>Ngày sinh</th>
+                  <th>Mã Sinh Viên</th>
+                  <th>Điểm Trung Bình</th>
+                </tr>
+            </thead>
+                <tr>
+                    <th>1</th>
+                    <th>Bùi Khắc Huy</th>
+                    <th>27/10/2004</th>
+                    <th>2251170001</th>
+                    <th>3.38</th>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <th>Trần Tiến Đạt</th>
+                    <th>01/01/2004</th>
+                    <th>2251170002</th>
+                    <th>3</th>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <th>Đỗ Văn Đạt</th>
+                    <th>02/02/2004</th>
+                    <th>2251170003</th>
+                    <th>3.8</th>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <th>Đinh Quang Đạt</th>
+                    <th>26/04/2004</th>
+                    <th>2251170004</th>
+                    <th>3.5</th>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <th>Đinh Văn Học</th>
+                    <th>05/05/2004</th>
+                    <th>2251170005</th>
+                    <th>3.1</th>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <th>Nguyễn Việt Dũng</th>
+                    <th>01/01/1990</th>
+                    <th>2251172305</th>
+                    
+                    <th>3.6</th>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <th>Đinh Văn Học</th>
+                    <th>01/01/1990</th>
+                    <th>2251172357</th>
+                    
+                    <th>8.5</th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <th>Nguyễn Văn Long</th>
+                    <th>01/01/1990</th>
+                    <th>1951060830</th>
+                    
+                    <th>8.5</th>
+                </tr>
+               </table>
+        
         </div>
-        <h2>Thông Tin Sinh Viên</h2>
-        <table>
-            <thead>
-            <tr>
-              <th>STT</th>
-              <th>Họ Tên</th>
-              <th>Ngày sinh</th>
-              <th>Mã Sinh Viên</th>
-              <th>Điểm Trung Bình</th>
-            </tr>
-        </thead>
-            <tr>
-                <th>1</th>
-                <th>Bùi Khắc Huy</th>
-                <th>27/10/2004</th>
-                <th>2251170001</th>
-                <th>3.38</th>
-              </tr>
-              <tr>
-                <th>2</th>
-                <th>Trần Tiến Đạt</th>
-                <th>01/01/2004</th>
-                <th>2251170002</th>
-                <th>3</th>
-              </tr>
-              <tr>
-                <th>3</th>
-                <th>Đỗ Văn Đạt</th>
-                <th>02/02/2004</th>
-                <th>2251170003</th>
-                <th>3.8</th>
-              </tr>
-              <tr>
-                <th>4</th>
-                <th>Đinh Quang Đạt</th>
-                <th>26/04/2004</th>
-                <th>2251170004</th>
-                <th>3.5</th>
-              </tr>
-              <tr>
-                <th>5</th>
-                <th>Đinh Văn Học</th>
-                <th>05/05/2004</th>
-                <th>2251170005</th>
-                <th>3.1</th>
-              </tr>
-              <tr>
-                <th>6</th>
-                <th>Nguyễn Việt Dũng</th>
-                <th>01/01/1990</th>
-                <th>2251172305</th>
-                
-                <th>3.6</th>
-            </tr>
-            <tr>
-                <th>7</th>
-                <th>Đinh Văn Học</th>
-                <th>01/01/1990</th>
-                <th>2251172357</th>
-                
-                <th>8.5</th>
-            </tr>
-            <tr>
-                <th>8</th>
-                <th>Nguyễn Văn Long</th>
-                <th>01/01/1990</th>
-                <th>1951060830</th>
-                
-                <th>8.5</th>
-            </tr>
-           </table>
-    
         <footer class="site-footer">
             <div class="row">
               <div class="col-sm-12 col-md-3">
