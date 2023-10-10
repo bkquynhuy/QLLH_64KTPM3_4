@@ -10,11 +10,12 @@ body {
 .navbar-nav .notification-icon {
   position: relative;
   margin-right: 10px;
+  color: #ddd;
 }
 
 .navbar-nav .notification-icon .fa-bell {
   font-size: 24px; 
-  color: #d41717; 
+  color: #ffffff; 
 }
 
 #header-nav {
@@ -31,6 +32,7 @@ body {
 }
 
 #nav {
+  
   display: inline-block;
 
 }
@@ -54,7 +56,7 @@ body {
   line-height: 50px;
   padding: 0 10px;
   padding-top: 2px;
-
+  /* color: #ddd */
   /* display: block; */
 }
 #nav .nav-icon {
@@ -88,7 +90,7 @@ body {
   width: 300px; 
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(152, 147, 172, 0.2);
   z-index: 999;
   padding: 10px;
 }
@@ -123,9 +125,9 @@ th {
     line-height: 1.2;
     letter-spacing: 1px;
     border-radius: 0; 
-    background: white;
+    background: rgb(0,113,188);
     margin: 0 140px;
-        
+    
      
 }
 header {
@@ -146,10 +148,12 @@ header {
     float: right;
     padding-top: 10px;
     padding-right: 60px; 
+    color: #f2f2f2;
 }
 
 .navbar-nav {
     padding-left: 200px;
+    color: #f2f2f2;
 }
 .navbar li a ,
 .navbar .navbar-brand {
