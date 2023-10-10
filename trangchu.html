@@ -7,6 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="/QLLH_64KTPM3_4/css/trangchu.css">
     <link rel="stylesheet" href="/QLLH_64KTPM3_4/assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+
 </head>
 <body>
     <div id="websinhvien">
@@ -21,14 +25,30 @@
                     <ul id="nav">
                         <li><a href=""><i class="nav-icon ti-home"></i></a></li>
                         <li><a href="">TRANG CHỦ</a>|</li>
-                        <li><a href="">QUỸ LỚP</a>|</li>
                         <li><a href="">SINH VIÊN</a>|</li>
-                        <li><a href="">THÔNG BÁO</a>|</li>
-                        <li><a href="">LỊCH HỌC</a>|</li>
-                        <li><a href="">LIÊN HỆ</a></li>
+                        <li><a href="thongtinsv.html">THÔNG TIN SINH VIÊN</a>|</li>
+                        <li><a href="bangdiem.html">BẢNG ĐIỂM</a></li>
                     </ul>
                     <div class="user-nav">
-                        <i class="user-icon ti-user"></i>
+                        
+                        <!-- <i class="user-icon ti-user"></i> -->
+                        <ul id="nav">
+                            <li>
+                            <a href="#" title="Thông báo" class="notification-icon">
+                                <i class="fa fa-bell"></i>
+                            </a>
+                            <div id="notification-box" class="notification-box">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <!-- Nội dung thông báo sẽ xuất hiện ở đây -->
+                                        <p>Thông báo từ admin sẽ hiển thị ở đây.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                            <li><a href="dangky.html">ĐĂNG KÝ</a> / </li>
+                            <li><a href="dangnhap.html">ĐĂNG NHẬP</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div id="banner-body">
@@ -125,12 +145,34 @@
                    <div id="thongtinlienhe">
                         <h1 class="lienhe-name">TRƯỜNG ĐẠI HỌC THỦY LỢI</h1>
                         <h4 class="lienhe-name2">Địa Chỉ: 175 Tây Sơn, Đống Đa, Hà Nội</h4>
-                        <h4 class="lienhe-name2">Điện Thoại: 0971xxx410</h4>
-                        <h4 class="lienhe-name2">Email: Thuyloi@e.tlu.edu.vn</h4>
+                        <h4 class="lienhe-name2">SĐT: 0123456789</h4>
+                        <h4 class="lienhe-name2">Email: nhom4provipgaugau@e.tlu.edu.vn</h4>
                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    // JavaScript để hiển thị và ẩn khung chứa nội dung thông báo
+    const notificationIcon = document.querySelector(".notification-icon");
+    const notificationBox = document.getElementById("notification-box");
+
+    notificationIcon.addEventListener("click", (event) => {
+        if (notificationBox.style.display === "block") {
+            notificationBox.style.display = "none";
+        } else {
+            notificationBox.style.display = "block";
+        }
+
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!notificationIcon.contains(event.target) && !notificationBox.contains(event.target)) {
+            notificationBox.style.display = "none";
+        }
+    });
+</script>
 </html>
