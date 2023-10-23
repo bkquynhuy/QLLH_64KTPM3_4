@@ -55,18 +55,21 @@
 
     // Thêm sự kiện nghe cho biểu mẫu đăng nhập
     document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
-
-        // Kiểm tra xác thực thông tin người dùng tại đây.
-        // Đây là nơi bạn có thể thêm mã kiểm tra người dùng và chuyển hướng nếu hợp lệ.
+        event.preventDefault(); 
         var username = usernameInput.value.trim();
         var password = passwordInput.value.trim();
 
-        if (username === "huy@gmail.com" && password === "123456") {
-            // Nếu thông tin xác thực hợp lệ, chuyển hướng đến trang chủ
-            window.location.href = "trangchu_dalogin.html";
+        let listAccount = localStorage.getItem('listAccount') || '[]';
+        listAccount = JSON.parse(listAccount);
+
+        const onCheck = listAccount.find(account => account.email == username && account.password == password);
+
+        if (onCheck) {
+            const currentAccount = JSON.stringify(onCheck);
+            localStorage.setItem('currentAccount', currentAccount);
+
+            location.href = 'trangchu_dalogin.html';
         } else {
-            // Nếu thông tin không hợp lệ, có thể hiển thị thông báo hoặc thực hiện xử lý khác
             alert("Thông tin đăng nhập không chính xác. Vui lòng thử lại.");
         }
     });

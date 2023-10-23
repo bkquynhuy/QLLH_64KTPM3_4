@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                         </li>
-                            <li>Bùi Khắc Huy</li>
+                            <li class="username"></li>
                         </ul>
                     </div>
                 </div>
@@ -158,6 +158,11 @@
     // JavaScript để hiển thị và ẩn khung chứa nội dung thông báo
     const notificationIcon = document.querySelector(".notification-icon");
     const notificationBox = document.getElementById("notification-box");
+    const username = document.querySelector('.user-nav .username');
+    let currentAccount = localStorage.getItem('currentAccount') || '{}';
+    currentAccount = JSON.parse(currentAccount);
+
+    username.innerText = currentAccount.name ?? '';
 
     notificationIcon.addEventListener("click", (event) => {
         if (notificationBox.style.display === "block") {

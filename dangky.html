@@ -20,9 +20,12 @@
               <label for="fullname" class="signup-label">Full name</label>
               <input type="text" id="fullname" class="signup-input" placeholder="Ex: Bùi Khắc Huy">
               <label for="email" class="signup-label">Email</label>
-              <input type="email" id="email" class="signup-input" placeholder="Ex: buikhachuy@gmai.com">
+              <input type="email" id="email" class="signup-input" placeholder="Ex: buikhachuy@gmail.com">
               <label for="password" class="signup-label">Password</label>
               <input type="password" id="password" class="signup-input" placeholder="******">
+
+              <label for="password" class="signup-label">Mã sinh viên</label>
+              <input type="text" id="studentCode" class="signup-input" placeholder="1951060830">
 
               <label for="class" class="signup-label">Class</label>
               <select class="signup-input">
@@ -35,7 +38,7 @@
               </select>
               <label for="birthday" class="signup-label">Birthday</label>
               <input type="date" id="Date" class="signup-input" min="2000-01-01">
-              <a class="signup-submit" href="trangchu_dalogin.html">Sign up</a>
+              <button class="signup-submit" type="submit">Sign up</button>
             </form>
             <p class="signup-already">
               <span>Already have an account ?</span>
@@ -45,3 +48,45 @@
     </body>
 </html>
 <script src="js/5.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.signup-form');
+    
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      let listAccount = localStorage.getItem('listAccount') || '[]';
+      listAccount = JSON.parse(listAccount);
+
+      const fullname = document.getElementById('fullname').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const studentCode = document.getElementById('studentCode').value;
+      const classSelect = document.querySelector('select.signup-input');
+      const selectedClass = classSelect.options[classSelect.selectedIndex].text;
+      const birthday = document.getElementById('Date').value;
+      const dateObject = new Date(birthday);
+
+      const day = dateObject.getDate();
+      const month = dateObject.getMonth() + 1;
+      const year = dateObject.getFullYear();
+      const formattedDate = `${day.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}/${year}`;
+
+      const data = {
+        name: fullname,
+        email: email,
+        password: password,
+        studentCode: studentCode,
+        class: selectedClass,
+        birthday: formattedDate,
+        gpa: 0,
+        isOfficer: false
+      }
+
+      listAccount = [...listAccount, data];
+      localStorage.setItem('listAccount', JSON.stringify(listAccount));
+
+      location.href = 'trangchu_dalogin.html';
+    });
+  });
+</script>
